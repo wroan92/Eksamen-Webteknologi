@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/exam.png">
+</head>
+
+<body class="flex-column">
+    <img src="./assets/gokstadakademiet_logo-horisontal-svart.png" width="500" height="120" alt="">
+    <div class="flex-row" id="links">
+        <p onclick="showRegister()">Registrer bruker</p>
+        <p onclick="showNewPost()">Opprett post</p>
+        <p id="loginLogoutLink" onclick="handleLoginLogout()">Logg inn</p>
+
+    </div>
+    <!-- Logg ut -->
+    <div class="flex-column">
+
+
+        <div class="box" id="registerUser">
+            <!-- Registrering -->
+            <h2>Registrer Bruker</h2>
+            <form id="registerForm">
+                Brukernavn: <input type="text" id="registerUsername"><br>
+                Passord: <input type="password" id="registerPassword"><br>
+                E-post: <input type="email" id="registerEmail"><br>
+                <button type="submit">Registrer</button>
+            </form>
+        </div>
+        <div class="box" id="loginUser">
+            <!-- Innlogging -->
+            <h2>Login</h2>
+            <form id="loginForm">
+                Brukernavn: <input type="text" id="loginUsername"><br>
+                Passord: <input type="password" id="loginPassword"><br>
+                <button type="submit">Logg Inn</button>
+            </form>
+        </div>
+
+        <div class="box" id="newPost">
+            <!-- Opprett Post -->
+            <h2>Opprett Post</h2>
+            <form id="createPostForm">
+                Tittel: <input type="text" id="postTitle"><br>
+                Innhold: <textarea id="postContent"></textarea><br>
+                <button type="submit">Opprett Post</button>
+            </form>
+        </div>
+
+        <div class="box" id="editPostForm" style="display:none;">
+            <h2>Rediger Post</h2>
+            <form>
+                Tittel: <input type="text" id="editPostTitle"><br>
+                Innhold: <textarea id="editPostContent"></textarea><br>
+                <button type="button" onclick="updatePost(postId)">Oppdater Post</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Hent alle poster</h2>
+            <div class="flex-row" id="showPosts"></div>
+        </div>
+
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

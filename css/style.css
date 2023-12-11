@@ -1,0 +1,105 @@
+/* Generell stil */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
+	line-height: 1.6;
+	padding: 20px;
+	background-image: url("../assets/MicrosoftTeams-image.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+#links p {
+	cursor: pointer;
+}
+img {
+	object-fit: cover;
+}
+
+#registerUser {
+	display: none;
+}
+
+#loginUser {
+	display: none;
+}
+
+#newPost {
+	display: none;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 20px;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+h1,
+h2 {
+	color: #333;
+	text-align: center;
+}
+
+/* Layout for bokser */
+.box {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+/* Stil for knapper */
+button {
+	background-color: #0d1f4f; /* Grønn farge */
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #bbcdfe; /* Mørkere grønn for hover-effekt */
+}
+
+/* Stil for skjemaelementer */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+	width: 100%;
+	padding: 10px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/* Spesiell stil for 'Logg ut' knappen */
+#logoutButton {
+	background-color: #d9534f; /* Rød farge */
+}
+
+#logoutButton:hover {
+	background-color: #c9302c; /* Mørkere rød for hover-effekt */
+}
+
+/* Gjem skjema for redigering av post */
+#editPostForm {
+	display: none;
+}
