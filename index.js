@@ -130,7 +130,9 @@ app.post("/login", (req, res) => {
     }
 
     if (!user) {
-      return res.status(401).json({ message: "Feil brukernavn eller passord." });
+      return res
+        .status(401)
+        .json({ message: "Feil brukernavn eller passord." });
     }
 
     try {
@@ -200,7 +202,7 @@ app.get("/posts/:id", (req, res) => {
 app.post("/posts", authenticateToken, (req, res) => {
   const { title, content, datePosted } = req.body;
   if (!title || !content || !datePosted) {
-    return res.status(400).json({ error: "All fields are required" });
+    return res.status(400).json({ error: "Alle feltene må fylles ut" });
   }
 
   const userIdQuery = "SELECT id FROM users WHERE username = ?";
@@ -249,7 +251,7 @@ app.delete("/posts/:id", authenticateToken, (req, res) => {
       console.error(err.message);
       return res.status(500).json({ error: err.message });
     }
-    res.json({ message: `Posten med id: ${title} ble slettet` });
+    res.json({ message: `Posten med id: ${id} ble slettet` });
   });
 });
 

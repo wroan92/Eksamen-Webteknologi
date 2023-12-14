@@ -25,7 +25,7 @@ Påse at Node.js er installert på din datamskin, hvis ikke kan det lastes ned f
 1. Last ned og pakk ut alle zipede filer til en ønsket mappe
 2. Åpne mappen i f.eks Viritual Studio Code.
 3. Installer Nødvendige pakker
-4. Opprett SQLite3 databasefil ved og starte serveren.
+4. Opprett SQLite3 databasefil (database.db)
 
 ### Klone prosjektet
 
